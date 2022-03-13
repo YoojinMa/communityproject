@@ -5,6 +5,10 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
+# 설정 및 Config 추적 대상에서 제외할 파일
+/src/main/resources/application.yml
+/src/main/resources/application-oauth.yml
+
 ### STS ###
 .apt_generated
 .classpath
