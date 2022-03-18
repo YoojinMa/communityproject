@@ -1,13 +1,14 @@
 package com.community.communityProject.domain;
 
-import javax.validation.constraints.NotNull;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -18,7 +19,7 @@ public class User {
     private Long id;
 
     @NotNull
-    private String nickname;
+    private String name;
 
     @NotNull
     private String email;
@@ -27,14 +28,14 @@ public class User {
     private Role role;
 
     @Builder
-    public User(String nickname, String email, Role role) {
-        this.nickname = nickname;
+    public User(String name, String email, Role role) {
+        this.name = name;
         this.email = email;
         this.role = role;
     }
 
     public User update(String name) {
-        this.nickname = nickname;
+        this.name = name;
 
         return this;
     }
