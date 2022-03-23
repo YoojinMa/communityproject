@@ -1,2 +1,7 @@
-package com.community.communityProject.mapper;public class UserMapper {
+package com.community.communityProject.mapper;
+
+import org.apache.ibatis.annotations.Mapper;
+
+@Mapper
+public interface UserMapper {
 }
