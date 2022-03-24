@@ -1,6 +1,7 @@
 package com.community.communityProject.config.auth;
 
 import com.community.communityProject.domain.Role;
+import com.community.communityProject.service.CustomOAuth2UserService;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -15,6 +16,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public SecurityConfig(CustomOAuth2UserService customOAuth2UserService) {
         this.customOAuth2UserService = customOAuth2UserService;
     }
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
@@ -35,7 +37,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                         "/**/*.js",
                         "/",
                         "/home/**",
-                        "/test/**"
+                        "/test/**")
                                 .permitAll()
                                 .antMatchers("/mytravel/**").hasRole(Role.GUEST.name())
                                 .anyRequest().authenticated()

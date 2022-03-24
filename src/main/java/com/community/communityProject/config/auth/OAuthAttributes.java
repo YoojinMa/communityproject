@@ -22,11 +22,13 @@ public class OAuthAttributes {
         this.name=name;
         this.email=email;
     }
+
     public static OAuthAttributes of(String registrationId,
                                      String userNameAttributeName,
                                      Map<String, Object> attributes) {
         return ofGoogle(userNameAttributeName, attributes);
     }
+
     public static OAuthAttributes ofGoogle(String userNameAttributeName,
                                            Map<String, Object> attributes) {
         return OAuthAttributes.builder()
@@ -36,6 +38,7 @@ public class OAuthAttributes {
                 .nameAttributeKey(userNameAttributeName)
                 .build();
     }
+
     public User toEntity() {
         return User.builder()
                 .name(name)
