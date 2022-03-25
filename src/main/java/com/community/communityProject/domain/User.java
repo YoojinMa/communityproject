@@ -5,13 +5,12 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Entity
 public class User {
 
     @Id
@@ -24,6 +23,7 @@ public class User {
     @NotNull
     private String email;
 
+    @Enumerated(EnumType.STRING)
     @NotNull
     private Role role;
 
