@@ -1,4 +1,4 @@
-package com.community.communityProject.config.auth;
+package com.community.communityProject.config.oauth;
 
 import com.community.communityProject.domain.User;
 import lombok.Getter;
@@ -8,9 +8,10 @@ import java.io.Serializable;
 @Getter
 public class SessionUser implements Serializable {
 
-    private String name, email;
+    private String name;
+    private String email;
 
-    public SessionUser(User user) {
+    public SessionUser(User user){
         this.name = user.getName();
         this.email = user.getEmail();
     }
