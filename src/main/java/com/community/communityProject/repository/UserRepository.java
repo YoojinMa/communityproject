@@ -1,6 +1,6 @@
 package com.community.communityProject.repository;
 
-import com.community.communityProject.domain.User;
+import com.community.communityProject.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

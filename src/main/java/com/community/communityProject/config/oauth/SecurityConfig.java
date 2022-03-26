@@ -1,6 +1,6 @@
 package com.community.communityProject.config.oauth;
 
-import com.community.communityProject.domain.Role;
+import com.community.communityProject.entity.Role;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;

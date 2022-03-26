@@ -1,4 +1,4 @@
-package com.community.communityProject.domain;
+package com.community.communityProject.entity;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

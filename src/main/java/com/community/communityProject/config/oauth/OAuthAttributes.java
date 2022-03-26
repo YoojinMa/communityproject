@@ -1,7 +1,7 @@
 package com.community.communityProject.config.oauth;
 
-import com.community.communityProject.domain.Role;
-import com.community.communityProject.domain.User;
+import com.community.communityProject.entity.Role;
+import com.community.communityProject.entity.User;
 import lombok.Builder;
 import lombok.Getter;
 

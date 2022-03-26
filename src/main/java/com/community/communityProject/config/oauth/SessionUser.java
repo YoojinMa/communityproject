@@ -1,6 +1,6 @@
 package com.community.communityProject.config.oauth;
 
-import com.community.communityProject.domain.User;
+import com.community.communityProject.entity.User;
 import lombok.Getter;
 
 import java.io.Serializable;

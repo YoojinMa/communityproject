@@ -1,6 +1,6 @@
 package com.community.communityProject.config.oauth;
 
-import com.community.communityProject.domain.User;
+import com.community.communityProject.entity.User;
 import com.community.communityProject.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

@@ -1,5 +1,6 @@
-package com.community.communityProject.config.oauth;
+package com.community.communityProject.config;
 
+import com.community.communityProject.config.oauth.LoginUserArgumentResolver;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
